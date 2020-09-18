@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <style type="text/css" media="screen"></style>
+  </head>
+
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Source Sans Pro", sans-serif;
+      color: #060e07;
+    }
+    :root {
+      --c1: #8fd694;
+      --c2: #7dba84;
+      --c3: #77ad78;
+      --c4: #6f8f72;
+      --c5: #504b43;
+    }
+    body {
+      background-color: #f0f9f1;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      background: var(--c4);
+      padding: 20px 30px;
+      justify-content: space-between;
+      position: fixed;
+      width: 100%;
+    }
+    #logo {
+      height: 35px;
+      margin-left: 15px;
+    }
+    #header-img {
+      height: 100%;
+    }
+    nav {
+      display: flex;
+    }
+    a {
+      text-decoration: none;
+      color: #f0f9f1;
+      font-size: 18px;
+      margin: 0 15px;
+      font-weight: 600;
+    }
+    #hero {
+      height: 650px;
+      background: var(--c1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #hero-wrapper {
+      margin: 100px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+    h3 {
+      font-size: 23px;
+      font-weight: 600;
+      color: var(--c5);
+    }
+    form {
+      margin-top: 15px;
+    }
+    input {
+      font-size: 20px;
+      outline: none;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+    }
+    #features {
+      display: flex;
+      justify-content: center;
+      padding: 50px 0;
+      background: var(--c2);
+    }
+    .features-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 50px;
+    }
+    .features-item i {
+      font-size: 50px;
+      margin-bottom: 10px;
+      color: var(--c5);
+    }
+    .features-item p {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--c5);
+    }
+    #how-it-works {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 35px;
+      background: var(--c3);
+    }
+    h2 {
+      font-size: 30px;
+      color: var(--c5);
+    }
+    iframe {
+      margin-top: 15px;
+    }
+    #courses h2 {
+      text-align: center;
+      padding-top: 25px;
+    }
+    .course-wrap {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 35px 0;
+    }
+    .card {
+      width: 300px;
+      border: 1px solid var(--c4);
+      border-radius: 5px;
+    }
+    .top img {
+      width: 100%;
+    }
+    .bottom {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+    .bottom h4 {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 10px;
+      color: var(--c5);
+    }
+    .bottom a {
+      background: var(--c4);
+      margin: 0;
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    @media (max-width: 512px) {
+      #logo {
+        height: 20px;
+      }
+      a {
+        font-size: 14px;
+      }
+      #hero {
+        height: 550px;
+      }
+      #hero-wrapper {
+        margin: 75px 50px;
+      }
+      h1 {
+        font-size: 30px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+      form {
+        text-align: center;
+      }
+      input {
+        font-size: 16px;
+      }
+      input[type="submit"] {
+        margin-top: 5px;
+      }
+      .features-item {
+        margin: 0 10px;
+      }
+      .features-item i {
+        font-size: 25px;
+      }
+      .features-item p {
+        text-align: center;
+        font-size: 18px;
+      }
+      h2 {
+        font-size: 25px;
+      }
+      iframe {
+        width: 350px;
+      }
+      .course-wrap {
+        flex-wrap: wrap;
+        padding: 10px;
+      }
+      .card {
+        margin-bottom: 15px;
+      }
+      .card:last-child {
+        margin-bottom: 0;
+      }
+    }
+  </style>
+  <body>
+    <div id="container">
+      <header id="header">
+        <div id="logo">
+          <img
+            src="https://design-style-guide.freecodecamp.org/downloads/fcc_primary_small.svg"
+            alt="logo"
+            id="header-img"
+          />
+        </div>
+        <nav id="nav-bar">
+          <a class="nav-link" href="#features">Features</a>
+          <a class="nav-link" href="#how-it-works">How It Works</a>
+          <a class="nav-link" href="#courses">Courses</a>
+        </nav>
+      </header>
+      <section id="hero">
+        <div id="hero-wrapper">
+          <h1>
+            We made developer much skilled and ready to work on real industries
+          </h1>
+          <h3>Subscribe for newsletter</h3>
+          <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+            />
+            <input id="submit" type="submit" value="Subscribe" />
+          </form>
+        </div>
+      </section>
+      <main>
+        <div id="features">
+          <div class="features-item">
+            <i class="fa fa-usd" aria-hidden="true"></i>
+            <p>100% Free</p>
+          </div>
+          <div class="features-item">
+            <i class="fa fa-certificate" aria-hidden="true"></i>
+            <p>Certificated Tutor</p>
+          </div>
+          <div class="features-item">
+            <i class="fa fa-folder-open" aria-hidden="true"></i>
+            <p>Open Source</p>
+          </div>
+        </div>
+        <div id="how-it-works">
+          <h2>How It Works?</h2>
+          <iframe
+            id="video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/7gigNsz4Oe8"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div id="courses">
+          <h2>Our Courses</h2>
+          <div class="course-wrap">
+            <div class="card">
+              <div class="top">
+                <img
+                  src="https://img.youtube.com/vi/PkZNo7MFNFg/maxresdefault.jpg"
+                  alt="thumbnail"
+                />
+              </div>
+              <div class="bottom">
+                <h4>Javascript course for beginners</h4>
+                <a href="#">Watch Now</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="top">
+                <img
+                  src="https://img.youtube.com/vi/PkZNo7MFNFg/maxresdefault.jpg"
+                  alt="thumbnail"
+                />
+              </div>
+              <div class="bottom">
+                <h4>Javascript course for beginners</h4>
+                <a href="#">Watch Now</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="top">
+                <img
+                  src="https://img.youtube.com/vi/PkZNo7MFNFg/maxresdefault.jpg"
+                  alt="thumbnail"
+                />
+              </div>
+              <div class="bottom">
+                <h4>Javascript course for beginners</h4>
+                <a href="#">Watch Now</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="top">
+                <img
+                  src="https://img.youtube.com/vi/PkZNo7MFNFg/maxresdefault.jpg"
+                  alt="thumbnail"
+                />
+              </div>
+              <div class="bottom">
+                <h4>Javascript course for beginners</h4>
+                <a href="#">Watch Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script>
+      // coded by @atjonathan
+      const projectName = "product-landing-page";
+      localStorage.setItem("example_project", "Product Landing Page");
+      // REPLACE CDN WITH GITCDN!!!
+    </script>
+  </body>
+</html>
